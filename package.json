@@ -9,6 +9,7 @@
     "connect-mongo": "^2.0.0",
     "express": "^4.16.2",
     "express-session": "^1.15.6",
+    "mocha": "^4.0.1",
     "mongoose": "^4.13.7",
     "nodemon": "^1.12.5",
     "react": "^16.2.0",
@@ -24,7 +25,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "mocha tests/db/*.js",
     "eject": "react-scripts eject"
   }
 }
