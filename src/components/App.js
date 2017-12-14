@@ -16,7 +16,7 @@ class App extends Component {
   // fetches all profiles in db
   componentDidMount() {
     const { email, description, username, imageUrl } = this.props
-    axios.get('/api/all').then(res => this.setState({ profiles: res.data }))
+    axios.get('http://localhost:3001/api/all').then(res => this.setState({ profiles: res.data }))
   }
 
   // updates the state of the app to be authenticated as well as updates the current user's profile

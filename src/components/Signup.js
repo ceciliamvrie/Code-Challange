@@ -39,7 +39,7 @@ class Signup extends Component {
     e.preventDefault()
     const user = { email: this.state.email, username: this.state.username, password: this.state.password, description: this.state.description, imageUrl: this.state.url }
     console.log('this is the state', this.state.url)
-    axios.post('/api/signup', user).then(this.props.handleSignupLogin(user))
+    axios.post('http://localhost:3001/api/signup', user).then(this.props.handleSignupLogin(user))
   }
 
   render() {

@@ -28,7 +28,7 @@ class Profile extends Component {
   handleProfileSubmit(e) {
     e.preventDefault()
     const newUser = {username: this.state.username, description: this.state.description, email: this.props.email}
-    axios.post('/api/users', newUser)
+    axios.post('http://localhost:3001/api/users', newUser)
   }
 
   render() {
