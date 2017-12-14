@@ -23,7 +23,7 @@ class Login extends Component {
   handleLoginSubmit(e) {
     e.preventDefault()
     const user = { email: this.state.email, password: this.state.password }
-    axios.post('https://blooming-cove-53651.herokuapp.com/api/login', user).then(user => this.props.handleSignupLogin(user.data))
+    axios.post('/api/login', user).then(user => this.props.handleSignupLogin(user.data))
   }
 
   render() {

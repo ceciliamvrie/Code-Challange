@@ -16,7 +16,7 @@ class App extends Component {
   // fetches all profiles in db
   componentDidMount() {
     const { email, description, username, imageUrl } = this.props
-    axios.get('https://blooming-cove-53651.herokuapp.com/api/all').then(res => this.setState({ profiles: res.data }))
+    axios.get('/api/all').then(res => this.setState({ profiles: res.data }))
   }
 
   // updates the state of the app to be authenticated as well as updates the current user's profile
