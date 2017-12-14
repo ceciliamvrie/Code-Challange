@@ -28,7 +28,7 @@ class Profile extends Component {
   handleProfileSubmit(e) {
     e.preventDefault()
     const newUser = {username: this.state.username, description: this.state.description, email: this.props.email}
-    axios.post('http://localhost:3001/api/users', newUser)
+    axios.post('https://blooming-cove-53651.herokuapp.com/api/users', newUser)
   }
 
   render() {
