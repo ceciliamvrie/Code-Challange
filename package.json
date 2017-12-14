@@ -22,8 +22,7 @@
     "redux-thunk": "^2.2.0"
   },
   "scripts": {
-    "start": "react-scripts start & npm run start:server",
-    "start:server": "node server.js",
+    "start": "node server.js",
     "build": "react-scripts build",
     "test": "mocha tests/db/*.js",
     "eject": "react-scripts eject"

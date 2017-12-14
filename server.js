@@ -4,16 +4,17 @@ const express = require('express')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 const User = require('./models/user')
+const path = require('path')
 
 const app = express()
 const router = express.Router()
 const db = require('./db/config.js');
 
-const PORT = process.env.API_PORT || 3001
+const PORT = process.env.PORT || 3001
 
+app.use(express.static(path.join(__dirname, 'build/static')))
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
-
 app.use(function(req, res, next) {
   res.setHeader('Cache-Control', 'no-cache')
   res.setHeader('Access-Control-Allow-Origin', '*')
