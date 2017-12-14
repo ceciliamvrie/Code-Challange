@@ -23,6 +23,7 @@
   },
   "scripts": {
     "start": "node server.js",
+    "start:dev": "npm run build; node server.js",
     "build": "react-scripts build",
     "test": "mocha tests/db/*.js",
     "eject": "react-scripts eject"

@@ -12,7 +12,7 @@ const db = require('./db/config.js');
 
 const PORT = process.env.PORT || 3001
 
-app.use(express.static(path.join(__dirname, 'build/static')))
+app.use(express.static(path.join(__dirname, 'build')))
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 app.use(function(req, res, next) {
@@ -30,12 +30,6 @@ app.use('/api', router)
 app.use('/login', router)
 app.use('/signup', router)
 app.use('/users', router)
-
-
-// routes
-router.get('/', function(req, res) {
-  res.json({ message: 'API Initialized!'})
-})
 
 router.post('/login', (req, res) => {
   User.findOne({email: req.body.email}).then(doc => doc.toObject()).then(u => res.json(u)).catch(console.error)
